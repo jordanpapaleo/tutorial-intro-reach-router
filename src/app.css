@@ -1,7 +1,7 @@
 .class-slides {
-  align-items: flex-start;
+  align-items: center;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding: 20px 40px;
 }
 
