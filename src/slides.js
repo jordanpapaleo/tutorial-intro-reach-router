@@ -94,7 +94,7 @@ export const Slide6 = () => (
       <li>npm install @reach/router</li>
       <li>Actually scratch that, there are too many cards here and I think we should clean this up before we get into routing</li>
       <li>Let's figure out a way we can easily <em>navigate</em> all this information</li>
-      <li>Go to the <a href='https://codesandbox.io/s/github/jordanpapaleo/tutorial-intro-reach-router/tree/one' target='_blank'><strong>Coolest Sandbox EVER</strong></a></li>
+      <li>Go to the <a href='https://codesandbox.io/s/github/jordanpapaleo/tutorial-intro-reach-router/tree/three' target='_blank'><strong>Coolest Sandbox EVER</strong></a></li>
     </ol>
   </div>
 )

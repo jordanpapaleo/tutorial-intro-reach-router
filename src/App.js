@@ -13,12 +13,12 @@ import {
 const App = () => (
   <div className='class-slides'>
     <nav className='slide-navigation'>
-      <Link to='/slide-1'>Slide 1</Link>
-      <Link to='/slide-2'>Slide 2</Link>
-      <Link to='/slide-3'>Slide 3</Link>
-      <Link to='/slide-4'>Slide 4</Link>
-      <Link to='/slide-5'>Slide 5</Link>
-      <Link to='/slide-6'>Slide 6</Link>
+      <Link to='/slide-1' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 1</Link>
+      <Link to='/slide-2' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 2</Link>
+      <Link to='/slide-3' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 3</Link>
+      <Link to='/slide-4' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 4</Link>
+      <Link to='/slide-5' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 5</Link>
+      <Link to='/slide-6' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 6</Link>
     </nav>
 
     <Router>
@@ -31,5 +31,11 @@ const App = () => (
     </Router>
   </div>
 )
+
+function isActiveLink (isCurrent) {
+  return {
+    className: isCurrent ? 'active' : ''
+  }
+}
 
 export default App
