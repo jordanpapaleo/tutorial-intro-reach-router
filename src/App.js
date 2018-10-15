@@ -1,11 +1,8 @@
 import './app.css'
-
 import React from 'react'
 import {Router, Link} from '@reach/router'
-
 import {
   NotFound,
-  Thankyou,
   Slide1,
   Slide2,
   Slide3,
@@ -13,7 +10,8 @@ import {
   Slide5,
   Slide6,
   SubSlideA,
-  SubSlideB
+  SubSlideB,
+  Thankyou
 } from './slides'
 
 const App = () => (
@@ -30,12 +28,12 @@ const App = () => (
 
     <div>
       <Router primary>
-        <Slide1 path='/slide-1' />
-        <Slide2 path='/slide-2' />
-        <Slide3 path='/slide-3' />
-        <Slide4 path='/slide-4' />
-        <Slide5 path='/slide-5' />
-        <Slide6 path='/slide-6' />
+        <Slide1 path='slide-1' />
+        <Slide2 path='slide-2' />
+        <Slide3 path='slide-3'/>
+        <Slide4 path='slide-4' />
+        <Slide5 path='slide-5' />
+        <Slide6 path='slide-6' />
         <Thankyou path='/thankyou/:date' />
         <NotFound default />
       </Router>

@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {format} from 'date-fns'
 import {navigate} from '@reach/router'
 
@@ -6,7 +7,7 @@ export const NotFound = () => (
   <div className='class-section'>
     <h2>Something's Missing</h2>
     <p>This route you are looking for seems to have wandered off.</p>
-    <p>We'll let someone its missing, but while we look maybe you should head on back</p>
+    <p>We'll let someone know its missing, but while we look maybe you should head on back.</p>
   </div>
 )
 
@@ -16,7 +17,7 @@ export const Slide1 = () => (
 
     <p>
       Jordan Papaleo <br />
-      Builder Instructor
+      Coder && Instructor
     </p>
   </div>
 )
@@ -127,3 +128,7 @@ export const Thankyou = ({date}) => (
     </ul>
   </div>
 )
+
+Thankyou.propTypes = {
+  date: PropTypes.string
+}
