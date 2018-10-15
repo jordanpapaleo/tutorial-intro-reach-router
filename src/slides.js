@@ -1,6 +1,15 @@
 import React from 'react'
-import {navigate} from '@reach/router'
+import PropTypes from 'prop-types'
 import {format} from 'date-fns'
+import {navigate} from '@reach/router'
+
+export const NotFound = () => (
+  <div className='class-section'>
+    <h2>Something's Missing</h2>
+    <p>This route you are looking for seems to have wandered off.</p>
+    <p>We'll let someone know its missing, but while we look maybe you should head on back.</p>
+  </div>
+)
 
 export const Slide1 = () => (
   <div className='class-section title-block'>
@@ -8,7 +17,7 @@ export const Slide1 = () => (
 
     <p>
       Jordan Papaleo <br />
-      Builder Instructor
+      Coder && Instructor
     </p>
   </div>
 )
@@ -86,16 +95,8 @@ export const Slide6 = () => (
       <li>npm install @reach/router</li>
       <li>Actually scratch that, there are too many cards here and I think we should clean this up before we get into routing</li>
       <li>Let's figure out a way we can easily <em>navigate</em> all this information</li>
-      <li>Go to the <a href='https://codesandbox.io/s/github/jordanpapaleo/tutorial-intro-reach-router/tree/final' target='_blank'><strong>Coolest Sandbox EVER</strong></a></li>
+      <li>Go to the <a href='https://codesandbox.io/s/github/jordanpapaleo/tutorial-intro-reach-router/tree/five' target='_blank'><strong>Coolest Sandbox EVER</strong></a></li>
     </ol>
-  </div>
-)
-
-export const NotFound = () => (
-  <div className='class-section'>
-    <h2>Something's Missing</h2>
-    <p>This route you are looking for seems to have wandered off.</p>
-    <p>We'll let someone its missing, but while we look maybe you should head on back</p>
   </div>
 )
 
@@ -127,3 +128,7 @@ export const Thankyou = ({date}) => (
     </ul>
   </div>
 )
+
+Thankyou.propTypes = {
+  date: PropTypes.string
+}
