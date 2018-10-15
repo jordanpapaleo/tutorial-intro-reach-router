@@ -2,6 +2,7 @@ import './app.css'
 import React from 'react'
 import {Router, Link} from '@reach/router'
 import {
+  NotFound,
   Slide1,
   Slide2,
   Slide3,
@@ -9,7 +10,8 @@ import {
   Slide5,
   Slide6,
   SubSlideA,
-  SubSlideB
+  SubSlideB,
+  Thankyou
 } from './slides'
 
 const App = () => (
@@ -21,6 +23,7 @@ const App = () => (
       <Link to='/slide-4' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 4</Link>
       <Link to='/slide-5' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 5</Link>
       <Link to='/slide-6' getProps={({isCurrent}) => isActiveLink(isCurrent)}>Slide 6</Link>
+      <Link to={`/thankyou/${Date.now()}`} getProps={({isCurrent}) => isActiveLink(isCurrent)}>Thanks</Link>
     </nav>
 
     <div>
@@ -31,6 +34,8 @@ const App = () => (
         <Slide4 path='slide-4' />
         <Slide5 path='slide-5' />
         <Slide6 path='slide-6' />
+        <Thankyou path='/thankyou/:date' />
+        <NotFound default />
       </Router>
 
       <Router primary={false}>
