@@ -16,7 +16,7 @@ export const Slide1 = () => (
 
     <p>
       Jordan Papaleo <br />
-      Builder Instructor
+      Coder && Sharer of Code 
     </p>
   </div>
 )
